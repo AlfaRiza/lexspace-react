@@ -6,7 +6,9 @@ import JustArrived from 'components/JustArrived'
 import Clients from 'components/Clients'
 import AsideMenu from 'components/AsideMenu'
 import Footer from 'components/Footer'
+import useScrollAnchor from 'helpers/hooks/useScrollAnchor'
 function Homepage() {
+  useScrollAnchor();
   return (
     <>
       <Header theme="white" position="absolute"/>
