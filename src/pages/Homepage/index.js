@@ -1,0 +1,23 @@
+import React from 'react'
+import Header from 'components/Header'
+import Hero from 'components/Hero'
+import BrowseTheRoom from 'components/BrowseTheRoom'
+import JustArrived from 'components/JustArrived'
+import Clients from 'components/Clients'
+import AsideMenu from 'components/AsideMenu'
+import Footer from 'components/Footer'
+function Homepage() {
+  return (
+    <>
+      <Header/>
+      <Hero/>
+      <BrowseTheRoom/>
+      <JustArrived/>
+      <Clients/>
+      <AsideMenu/>
+      <Footer/>
+    </>
+  )
+}
+
+export default Homepage
