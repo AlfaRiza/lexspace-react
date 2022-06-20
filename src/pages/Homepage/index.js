@@ -7,8 +7,10 @@ import Clients from 'components/Clients'
 import AsideMenu from 'components/AsideMenu'
 import Footer from 'components/Footer'
 import useScrollAnchor from 'helpers/hooks/useScrollAnchor'
+import useModalDOM from 'helpers/hooks/useModalDOM'
 function Homepage() {
   useScrollAnchor();
+  useModalDOM();
   return (
     <>
       <Header theme="white" position="absolute"/>
