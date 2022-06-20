@@ -4,15 +4,15 @@ import propTypes from 'prop-types'
 
 function Breadcrumb({ list }) {
   return (
-    <section className="bg-gray-100 py-8 px-4 pt-20">
+    <section className="bg-gray-100 py-8 px-4">
       <div className="container mx-auto">
         <ul className="breadcrumb">
             {
                 list?.map?.( (item, index) => {
                     const arias = index === list?.length ? {"aria-label": "current-page"} : {}
                     return (
-                        <li key={item.url}>
-                            <Link to={item.url}>{item.name}</Link>
+                        <li key={item.url} >
+                            <Link to={item.url} {...arias}>{item.name}</Link>
                         </li>
                     )
                 })

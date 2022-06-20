@@ -9,7 +9,7 @@ import Footer from 'components/Footer'
 function Homepage() {
   return (
     <>
-      <Header/>
+      <Header theme="white" position="absolute"/>
       <Hero/>
       <BrowseTheRoom/>
       <JustArrived/>

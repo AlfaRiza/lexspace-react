@@ -1,17 +1,20 @@
 import React from 'react'
 import Logo from 'assets/images/logo.png'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
-function Header() {
+function Header({theme, position}) {
   return (
-    <header className="absolute w-full z-50 px-4">
+    <header className={`${position} w-full z-50 px-4`}>
       <div className="container mx-auto py-5">
         <div className="flex flex-stretch items-center">
           <div className="w-56 items-center flex">
-            <img
-              src={Logo}
-              alt="Luxspace | Fulfill your house with beautiful furniture"
-            />
+            <Link to="/">
+              <img
+                src={Logo}
+                alt="Luxspace | Fulfill your house with beautiful furniture"
+              />
+            </Link>
           </div>
           <div className="w-full"></div>
           <div className="w-auto">
@@ -20,22 +23,22 @@ function Header() {
               id="menu"
             >
               <li className="mx-3 py-6 md:py-0">
-                <Link to="/" className="text-black md:text-white hover:underline"
+                <Link to="/" className={`hover:underline ${theme === 'white' ? "text-black md:text-white" : "text-white md:text-black"}`}
                   >Showcase</Link
                 >
               </li>
               <li className="mx-3 py-6 md:py-0">
-                <Link to="/" className="text-black md:text-white hover:underline"
+                <Link to="/" className={`hover:underline ${theme === 'white' ? "text-black md:text-white" : "text-white md:text-black"}`}
                   >Catalog</Link
                 >
               </li>
               <li className="mx-3 py-6 md:py-0">
-                <Link to="/" className="text-black md:text-white hover:underline"
+                <Link to="/" className={`hover:underline ${theme === 'white' ? "text-black md:text-white" : "text-white md:text-black"}`}
                   >Delivery</Link
                 >
               </li>
               <li className="mx-3 py-6 md:py-0">
-                <Link to="/" className="text-black md:text-white hover:underline"
+                <Link to="/" className={`hover:underline ${theme === 'white' ? "text-black md:text-white" : "text-white md:text-black"}`}
                   >Rewards</Link
                 >
               </li>
@@ -102,6 +105,16 @@ function Header() {
       </div>
     </header>
   )
+}
+
+Header.defaultProps = {
+  theme: 'black',
+  position: 'absolute'
+}
+
+Header.propTypes = {
+  theme: PropTypes.string,
+  absolute: PropTypes.string,
 }
 
 export default Header;
